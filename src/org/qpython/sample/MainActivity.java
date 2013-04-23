@@ -63,7 +63,11 @@ public class MainActivity extends Activity {
 	        mBundle.putString("act", "onPyApi");
 	        mBundle.putString("flag", "onQPyExec");            // any String flag you may use in your context
 	        mBundle.putString("param", "");          // param String param you may use in your context
-	        mBundle.putString("pycode", "print 'Hello world'");        // The String Python code
+	        
+	        /*
+	         * The String Python code, you can put your py file in res or raw or intenet, so that you can get it the same way, which can make it scalable
+	         */ 
+	        mBundle.putString("pycode", "print 'Hello world'");        
 
 	        intent.putExtras(mBundle);
 
