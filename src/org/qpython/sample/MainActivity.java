@@ -73,7 +73,7 @@ public class MainActivity extends Activity {
 
 	        startActivityForResult(intent, SCRIPT_EXEC_PY);
 	    } else {
-	        Toast.makeText(getApplicationContext(), "Please install QPython Player first", Toast.LENGTH_LONG).show();
+	        Toast.makeText(getApplicationContext(), "Please install QPython first", Toast.LENGTH_LONG).show();
 
 	    	try {
 		        Uri uLink = Uri.parse("market://details?id=com.hipipal.qpyplus");
@@ -91,11 +91,16 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {  
 	    if (requestCode == SCRIPT_EXEC_PY) {
-	        Bundle bundle = data.getExtras();
-	        String flag = bundle.getString("flag"); // flag you set
-	        String param = bundle.getString("param"); // param you set 
-	        String result = bundle.getString("result"); // Result your Pycode generate
-	        Toast.makeText(this, "onQPyExec: return ("+result+")", Toast.LENGTH_SHORT).show();
+	    	if (data!=null) {
+		        Bundle bundle = data.getExtras();
+		        String flag = bundle.getString("flag"); // flag you set
+		        String param = bundle.getString("param"); // param you set 
+		        String result = bundle.getString("result"); // Result your Pycode generate
+		        Toast.makeText(this, "onQPyExec: return ("+result+")", Toast.LENGTH_SHORT).show();
+	    	} else {
+		        Toast.makeText(this, "onQPyExec: data is null", Toast.LENGTH_SHORT).show();
+
+	    	}
 	    }
 	}
 
