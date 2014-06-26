@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 	 * 
 	 */
 	private final int SCRIPT_EXEC_PY = 40001;
-	private final String extPlgPlusName = "com.hipipal.qpy";
+	private final String extPlgPlusName = "com.hipipal.qpyplus";
 	public static boolean checkAppInstalledByName(Context context, String packageName) {
 	    if (packageName == null || "".equals(packageName))  
 	        return false;  
@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
 	        Toast.makeText(getApplicationContext(), "Please install QPython Player first", Toast.LENGTH_LONG).show();
 
 	    	try {
-		        Uri uLink = Uri.parse("market://details?id=com.hipipal.qpy");
+		        Uri uLink = Uri.parse("market://details?id=com.hipipal.qpyplus");
 		        Intent intent = new Intent( Intent.ACTION_VIEW, uLink );
 		        startActivity(intent);
 	    	} catch (Exception e) {
