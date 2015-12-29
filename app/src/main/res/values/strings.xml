@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android App With QPython API</string>
+    <string name="hello_world">Please install the QPython and Click the button to see the sample to get middle result from QPython !</string>
+    <string name="menu_settings">Settings</string>
+    <string name="sample_code" formatted="false">print \"Hello\"</string>
+
+</resources>

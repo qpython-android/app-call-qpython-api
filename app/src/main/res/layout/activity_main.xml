@@ -7,7 +7,8 @@
 <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
     
     <TextView
     	android:padding="20dip"
@@ -15,18 +16,31 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:textColor="#999999"
         android:text="@string/hello_world" />
         
         
-       <Button
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/edit_text"
+        android:textColor="#313131"
+        android:layout_weight="0.32"
+        android:text="@string/sample_code" />
+
+    <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:onClick="onQPyExec"
-        android:text="Click me" />
-
+        android:text="Run"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
 
 </RelativeLayout>
