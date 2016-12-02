@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
 	 * 
 	 */
 	private final int SCRIPT_EXEC_PY = 40001;
-	private final String extPlgPlusName = "com.hipipal.qpyplus";
+	private final String extPlgPlusName = "org.qpython.qpy";
 	public static boolean checkAppInstalledByName(Context context, String packageName) {
 	    if (packageName == null || "".equals(packageName))  
 	        return false;  
@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
 			Toast.makeText(this, "Sample of calling QPython API", Toast.LENGTH_SHORT).show();
 
 	        Intent intent = new Intent();
-	        intent.setClassName(extPlgPlusName, extPlgPlusName+".MPyApi");
+	        intent.setClassName(extPlgPlusName, "org.qpython.qpylib.MPyApi");
 	        intent.setAction(extPlgPlusName + ".action.MPyApi");
 
 	        Bundle mBundle = new Bundle(); 
